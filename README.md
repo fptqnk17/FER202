@@ -7,6 +7,7 @@
 ## Table of contents
 - Labs:
   - Lab 1: [Click here!!!](Labs/Lab1/README.md)
+  - Lab 2: [Click here!!!](Labs/Lab2/README.md)
 
 ## Contributors:
 
