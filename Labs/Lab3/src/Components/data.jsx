@@ -1,0 +1,42 @@
+export const data = [
+  {
+    question: "What is the capital of France?",
+    option1: "Paris",
+    option2: "London",
+    option3: "Berlin",
+    option4: "Madrid",
+    ans: 1,
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    option1: "Jupiter",
+    option2: "Saturn",
+    option3: "Mars",
+    option4: "Earth",
+    ans: 1,
+  },
+  {
+    question: "Which continent has the highest number of countries?",
+    option1: "Asia",
+    option2: "Europe",
+    option3: "North America",
+    option4: "Africa",
+    ans: 4,
+  },
+  {
+    question: "Which of the following are types of computer hardware?",
+    option1: "RAM",
+    option2: "FireFox",
+    option3: "Microsoft Windows",
+    option4: "Excel",
+    ans: 1,
+  },
+  {
+    question: "What is Wi-Fi?",
+    option1: "A type of sound card",
+    option2: "A type of wireless network",
+    option3: "An extra-wide computer case used",
+    option4: "A type of software that scans for viruses",
+    ans: 2,
+  },
+];

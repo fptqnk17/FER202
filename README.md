@@ -8,6 +8,7 @@
 - Labs:
   - Lab 1: [Click here!!!](Labs/Lab1/README.md)
   - Lab 2: [Click here!!!](Labs/Lab2/README.md)
+  - Lab 3: [Click here!!!](Labs/Lab3/README.md)
 
 ## Contributors:
 
