@@ -11,6 +11,7 @@
   - Lab 3: [Click here!!!](Labs/Lab3/README.md)
   - Lab 3.1: [Click here!!!](Labs/Lab3.1/README.md)
 - Exercises:
+  - Exercise 11: [Click here!!!](Exercises/Exercise11/README.md)
   - Exercise 12: [Click here!!!](Exercises/Exercise12/README.md)
 
 ## Contributors:
