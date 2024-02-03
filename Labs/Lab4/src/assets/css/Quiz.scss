@@ -1,0 +1,101 @@
+@import "vars.scss";
+
+.quiz-container {
+  width: 700px;
+  background: $bg;
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 30px 60px;
+  box-sizing: border-box;
+  position: relative;
+
+  .active-question-no {
+    font-size: 40px;
+    font-weight: 500;
+    color: $primary;
+  }
+
+  .total-question {
+    font-size: 25px;
+    font-weight: 500;
+    color: $disabled;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  ul {
+    margin-top: 20px;
+    margin-left: -40px;
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      color: $foreground;
+      background: $bg;
+      font-size: 25px;
+      border: 1px solid $disabled;
+      border-radius: 16px;
+      padding: 11px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .selected-answer {
+      background: $primary;
+      border: 1px solid $accent;
+      color: $bg;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button {
+    background: linear-gradient(0deg, $primary 0.03%, $accent);
+    border-radius: 9px;
+    font-size: 25px;
+    color: $bg;
+    padding: 10px 42px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+
+    &:disabled {
+      background: $bg-accent;
+      color: $disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  .result {
+    h3 {
+      font-size: 35px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 25px;
+      font-weight: 500;
+
+      span {
+        color: $primary;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
