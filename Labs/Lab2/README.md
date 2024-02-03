@@ -1,7 +1,7 @@
 # Lab 2
 
 ## Documents
-- Document: [Click here!!!](Lab2_Build_the_website_interface_BootStrap.docx.docx.pdf)
+- Document: [Click here!!!](Lab2_Build_the_website_interface_BootStrap.docx.pdf)
 
 ## Build
 ### Install dependencies:
