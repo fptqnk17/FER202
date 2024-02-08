@@ -11,7 +11,7 @@
   - Lab 3: [Click here!!!](Labs/Lab3/README.md)
     - Lab 3.1: [Click here!!!](Labs/Lab3.1/README.md)
   - Lab 4: [Click here!!!](Labs/Lab4/README.md)
-    - Lab 4: [Click here!!!](Labs/Lab4.1/README.md)
+    - Lab 4.1: [Click here!!!](Labs/Lab4.1/README.md)
   - Lab 5 (base): [Click here!!!](Labs/Lab5/README.md)
   - Lab 6 (base): [Click here!!!](Labs/Lab6/README.md)
 - Exercises:
