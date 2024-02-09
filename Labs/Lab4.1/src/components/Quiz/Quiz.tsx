@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { Question, ResultState, resultInitalState } from "../../data/Data";
 import "./Quiz.scss";
+const AnswerTimer = lazy(() => import("../AnswerTimer/AnswerTimer"));
 
 const Quiz = (props: { questions: Question[] }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -8,9 +9,9 @@ const Quiz = (props: { questions: Question[] }) => {
   const [answer, setAnswer] = useState<boolean | null>(null);
   const [result, setResult] = useState<ResultState>(resultInitalState);
   const [showResult, setShowResult] = useState<boolean>(false);
+  const [showAnswerTimer, setShowAnswerTimer] = useState<boolean>(true);
 
-  const { question, choices, correctAnswer } =
-    props.questions[currentQuestion];
+  const { question, choices, correctAnswer } = props.questions[currentQuestion];
 
   const onAnswerClick = (answer: string, index: number) => {
     setAnswerIdx(index);
@@ -22,14 +23,15 @@ const Quiz = (props: { questions: Question[] }) => {
     }
   };
 
-  const onClickNext = () => {
+  const onClickNext = (isFinalAnwser: boolean) => {
     setAnswerIdx(null);
+    setShowAnswerTimer(false);
 
     setResult((prev): ResultState => {
-      return answer
+      return isFinalAnwser
         ? {
             ...prev,
-            score: prev.score + 1,
+            score: prev.score + 5,
             correctAnswers: prev.correctAnswers + 1,
           }
         : {
@@ -44,6 +46,8 @@ const Quiz = (props: { questions: Question[] }) => {
       setCurrentQuestion(0);
       setShowResult(true);
     }
+
+    setTimeout(() => setShowAnswerTimer(true));
   };
 
   const onTryAgain = () => {
@@ -51,10 +55,18 @@ const Quiz = (props: { questions: Question[] }) => {
     setResult(resultInitalState);
   };
 
+  const hanldeTimeUp = () => {
+    setAnswer(false);
+    onClickNext(false);
+  };
+
   return (
     <div className="quiz-container">
       {!showResult ? (
         <>
+          {showAnswerTimer && (
+            <AnswerTimer duration={8} onTimeUp={hanldeTimeUp} />
+          )}
           <span className="active-question-no">{currentQuestion + 1}</span>
           <span className="total-question">/{props.questions.length}</span>
           <h2>{question}</h2>
@@ -70,7 +82,10 @@ const Quiz = (props: { questions: Question[] }) => {
             ))}
           </ul>
           <div className="footer">
-            <button onClick={onClickNext} disabled={answerIdx == null}>
+            <button
+              onClick={() => onClickNext(answer !== null)}
+              disabled={answerIdx == null}
+            >
               {currentQuestion === props.questions.length - 1
                 ? "Finish"
                 : "Next"}
