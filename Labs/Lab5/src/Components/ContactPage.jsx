@@ -1,41 +1,53 @@
-import pikachu from "../assets/img/contact/pikachu_hello.gif";
-import mario from "../assets/img/contact/mario_banner.gif";
-import github from "../assets/img/contact/github.gif";
-import facebook from "../assets/img/contact/facebook.gif";
-import discord from "../assets/img/contact/discord.gif";
-import linkedin from "../assets/img/contact/linkedin.gif";
-import cat from "../assets/img/contact/cat.gif";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../assets/ContactPage.scss";
 
 const ContactPage = () => {
-    return (
-        <div className='container'>
-            <h1 className="center">
-              <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!;+I'm+Quoc+Chuong!"/>
-              <img src={pikachu} width="85" alt="pikachu_hello"/>&nbsp;
-            </h1>
+  const form = useRef();
+  const [message, setMessage] = useState("");
 
-            <br/>
-            <img align="right" alt="Coding" width="600" height="350" src={mario}></img>
-            <br/>
-            <h1><img src={cat} width="40" height="40"/>  Contact with me </h1>
-            <br/>
-            <div className="gif-contact">
-                <a href="https://github.com/bakaqc" target="_blank" rel="noreferrer">
-                    <img src={github} alt="github"/>
-                </a>
-                <a href="https://www.facebook.com/dqchuongbk" target="_blank" rel="noreferrer">
-                    <img src={facebook} alt="facebook"/>
-                </a>
-                <a href="https://www.linkedin.com/in/bakaqc" target="_blank" rel="noreferrer">
-                    <img src={linkedin}  alt="linkedin"/>
-                </a>
-                <a href="https://discord.gg/6MyfJvTe" target="_blank" rel="noreferrer">
-                    <img src={discord}  alt="discord"/>
-                </a>
-            </div>
-        </div>
-    );
-}
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_24myi9l",
+        "template_saj2mli",
+        form.current,
+        "PmunvrIn-8TvgecZa"
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setMessage("Send Successful!");
+          e.target.reset();
+          setTimeout(() => setMessage(""), 3000); // Clear message after 3 seconds
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
+  return (
+    <div className="contact">
+      <h2>Contact with BaKa</h2>
+      <form ref={form} onSubmit={sendEmail}>
+        {message && <div className="message">{message}</div>}
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Country</label>
+        <input type="text" name="user_country" />
+        <label>State</label>
+        <input type="text" name="user_state" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
+  );
+};
 
 export default ContactPage;
