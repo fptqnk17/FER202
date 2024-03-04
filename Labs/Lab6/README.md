@@ -1,7 +1,7 @@
 # Lab 6
 
 ## Documents
-- Document: [Click here!!!](Lab6_About_Redux_Redux-Thunk_Redux-Toolkit.docx.pdf)
+- Document: [Click here!!!](Lab6_About_Redux_Redux_Thunk_Redux_Toolkit.docx.pdf)
 
 ## Build
 ### Install dependencies:
