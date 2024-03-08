@@ -1,4 +1,17 @@
-export const jsQuizz = {
+export interface Question {
+  question: string;
+  choices: string[];
+  type: string;
+  correctAnswer: string;
+}
+
+export interface ResultState {
+  score: number;
+  correctAnswers: number;
+  wrongAnswers: number;
+}
+
+export const tsQuiz = {
   questions: [
     {
       question:
@@ -47,7 +60,7 @@ export const jsQuizz = {
       type: "MCQs",
       correctAnswer: "JavaScript compiler",
     },
-  ],
+  ] as Question[],
 };
 
 export const resultInitalState = {

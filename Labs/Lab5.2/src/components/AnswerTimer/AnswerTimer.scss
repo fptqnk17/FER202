@@ -1,0 +1,17 @@
+@import "../../style/vars.scss";
+
+.answer-timer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $disabled;
+
+    .prgoress {
+        height: 5px;
+        transition-duration: 1s;
+        width: 0;
+        transition-timing-function: linear;
+        border-radius: 4px 4px 0 0;
+    }
+}
