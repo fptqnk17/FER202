@@ -1,0 +1,65 @@
+.contact {
+  h2 {
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+    margin: 0.67em 0;
+  }
+
+  .message {
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 2rem auto 0; // Added top margin
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    label {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
