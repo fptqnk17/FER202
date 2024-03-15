@@ -17,7 +17,7 @@
   - Lab 5: [Click here!!!](Labs/Lab5/README.md)
     - Lab 5.1: [Click here!!!](Labs/Lab5.1/README.md)
     - Lab 5.2: [Click here!!!](Labs/Lab5.2/README.md)
-  - Lab 6: [Click here!!!](Labs/Lab6/README.md)
+  - Lab 6(test): [Click here!!!](Labs/Lab6/README.md)
     - Lab 6.1: [Click here!!!](Labs/Lab6.1/README.md)
 - Exercises:
   - Exercise 11: [Click here!!!](Exercises/Exercise11/README.md)
