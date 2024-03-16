@@ -24,7 +24,7 @@
   - Exercise 12: [Click here!!!](Exercises/Exercise12/README.md)
 - Assignment: [Click here!!!](https://github.com/bakaqc/labtrack)
 - Practical Exam:
-  - PE_SPRING_2024:
+  - SPRING 2024:
     - Document: [Click here!!!](PE/PE_SPRING_2024/Exam_FER202_Spring2024.pdf)
     - Version 1: [Click here!!!](PE/PE_SPRING_2024/v1.0/README.md)
     - Version 2: [Click here!!!](PE/PE_SPRING_2024/v2.0/README.md)
