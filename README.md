@@ -27,7 +27,7 @@
   - PE_SPRING_2024:
     - Document: [Click here!!!](PE/PE_SPRING_2024/Exam_FER202_Spring2024.pdf)
     - Version 1: [Click here!!!](PE/PE_SPRING_2024/v1.0/README.md)
-    - Version 1: [Click here!!!](PE/PE_SPRING_2024/v2.0/README.md)
+    - Version 2: [Click here!!!](PE/PE_SPRING_2024/v2.0/README.md)
 
 ## Contributors:
 
