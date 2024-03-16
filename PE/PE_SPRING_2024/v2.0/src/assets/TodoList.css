@@ -1,0 +1,108 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  font-family: Arial, sans-serif;
+}
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 30vw;
+}
+
+.add-task button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.list-task {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  width: 30vw;
+}
+
+.list-task button {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.task-progress,
+.task-completed,
+.task-deleted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.task-progress div,
+.task-completed div,
+.task-deleted div {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-progress button,
+.task-completed button,
+.task-deleted button {
+  margin-left: 10px;
+}
+
+.task-completed {
+  background-color: #f9f9f9;
+}
+
+.task-deleted {
+  background-color: #f2dede;
+}
+.task-progress div,
+.task-completed div,
+.task-deleted div {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-progress div .title-time,
+.task-completed div .title-time,
+.task-deleted div .title-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goto {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
