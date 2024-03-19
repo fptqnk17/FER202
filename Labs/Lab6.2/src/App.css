@@ -1,0 +1,221 @@
+* {
+  font-family: "Verdana", cursive, sans-serif;
+}
+body {
+  background-color: #7cc6fe;
+  /* background-image: url(./assets/images/bg.jpg); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: #252d4a;
+  /* background-color: #0083c0; */
+  height: 50vh;
+   max-height: 600px;
+  width: 60vw;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+}
+/* /////////////////////////////////////////////// */
+/* /////////////////////  start ////////////////// */
+/* //////////////////////////////////////////////// */
+.button{
+  background: rgb(131, 5, 189);
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: white;
+}
+.startBox{
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.startButton{
+  background: rgb(131, 5, 189);
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: white;
+}
+.timeInput{
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+.timeInput::-webkit-inner-spin-button, 
+.timeInput::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/* /////////////////////////////////////////////// */
+/* /////////////////////  question ////////////////// */
+/* //////////////////////////////////////////////// */
+.questionBox{
+ position: relative;
+ height: 100%;
+ color: white;
+}
+.questionBox .questionHead{
+  display: flex;
+  justify-content: space-between;
+}
+.middleBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+      "question option";
+}
+.question{
+  grid-area: question;
+}
+.question p{
+  font-size: 20px;
+}
+.option{
+  grid-area: option;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+}
+.option .text{
+  width: 80%;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 5px;
+  border: 5px solid #234668;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.option .text:hover{
+  background: #234668;
+}
+.option .text input{
+  position: fixed;
+opacity: 0;
+pointer-events: none;
+}
+.selected{
+  background: rgb(131, 5, 189);
+  width: 80%;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 5px;
+  border: 5px solid #234668;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.option .selected input{
+  position: fixed;
+opacity: 0;
+pointer-events: none;
+}
+.questionBottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.nextBtn{
+  float: right;
+}
+/* /////////////////////////////////////////////// */
+/* /////////////////////  end ////////////////// */
+/* //////////////////////////////////////////////// */
+.endBox{
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.trophy{
+  height: 50px;
+}
+
+/* /////////////////////////////////////////////// */
+/* /////////////////////  modal ////////////////// */
+/* //////////////////////////////////////////////// */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
+  color: black;
+  width: 50%;
+  height: 80%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  overflow: auto;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.modalBody{
+  text-align: left;
+}
+.modalBody header{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 10px;
+}
+.bg-success{
+  background: #48c774;
+  color: white;
+  padding: 10px;
+  width: 90%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.bg-warning{
+  background: #3273dc;
+  color: white;
+  padding: 10px;
+  width: 90%;
+  font-size: 13px;
+  font-weight: 300;
+}
+.bg-danger{
+  background: #f14668;
+  color: white;
+  padding: 10px;
+  width: 90%;
+  font-size: 13px;
+  font-weight: 500;
+}
